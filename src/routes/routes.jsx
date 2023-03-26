@@ -8,6 +8,7 @@ import SearchPage from '../pages/Search/SearchPage';
 /* Components */
 
 import { NavBar } from '../components/NavBar/NavBar';
+import { Footer } from '../components/Footer/Footer';
 
 function MyRoutes() {
   return (
@@ -19,6 +20,7 @@ function MyRoutes() {
             <Route exact path='/create' element={<CreatePage/>}/>
             <Route exact path='/search' element={<SearchPage/>}/>
         </Routes>
+        <Footer/>
     </Router>
   )
 }

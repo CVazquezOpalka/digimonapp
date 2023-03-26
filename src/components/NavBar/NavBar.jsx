@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <div className={styles.container_navbar}>
+    <header className={styles.container_navbar}>
       <picture className={styles.imgBox}>
         <img src={img} alt="logo de digimon" />
       </picture>
@@ -28,6 +28,6 @@ export const NavBar = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };

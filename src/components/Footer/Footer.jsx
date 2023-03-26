@@ -8,9 +8,9 @@ export const Footer = () => {
       <section className={styles.footer_sections}>
         <nav className={styles.links}>
           <ul className={styles.links_nav}>
-            <li>Home</li>
-            <li>Create</li>
-            <li>About</li>
+            <li className={styles.nav_link}>Home</li>
+            <li className={styles.nav_link}>Create</li>
+            <li className={styles.nav_link}>About</li>
           </ul>
         </nav>
         <picture className={styles.imgBox}>

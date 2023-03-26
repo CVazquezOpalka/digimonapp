@@ -11,17 +11,17 @@ export const NavBar = () => {
       </picture>
       <nav className={styles.navigation}>
         <ul className={styles.navigation_container}>
-          <li>
+          <li className={styles.nav_link}>
             <Link to="/" style={{ color: "white" }}>
               home
             </Link>
           </li>
-          <li>
+          <li className={styles.nav_link}> 
             <Link to="/create" style={{ color: "white" }}>
               Create
             </Link>
           </li>
-          <li>
+          <li className={styles.nav_link}>
             <Link to="/about" style={{ color: "white" }}>
               About
             </Link>

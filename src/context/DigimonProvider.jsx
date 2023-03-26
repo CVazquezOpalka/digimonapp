@@ -15,6 +15,7 @@ export const DigimonProvider = ({ children }) => {
     const resMega = await axios.get(mega);
     setAllDigimon([...resRookie.data, ...resChampion.data, ...resMega.data]);
     setLoading(false);
+    console.log(allDigimon)
   };
 
   useEffect(() => {
@@ -22,6 +23,6 @@ export const DigimonProvider = ({ children }) => {
   }, []);
 
   return (
-    <DigimonContext.Provider value={{}}>{children}</DigimonContext.Provider>
+    <DigimonContext.Provider value={{allDigimon, loading}}>{children}</DigimonContext.Provider>
   );
 };

@@ -40,7 +40,7 @@ img {
   list-style: none;
 }
 
-li {
+.nav_link{
   display: block;
   padding: 15px;
   border-radius: 5px;
@@ -50,7 +50,8 @@ li {
   text-transform: uppercase;
   transition: 0.5s;
 }
-li:hover {
+
+.nav_link:hover {
   background-color: blue;
   color: bisque;
   cursor: pointer;

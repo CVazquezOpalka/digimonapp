@@ -1,7 +1,14 @@
 import React from 'react'
 
+/* components */
+import { ContextGrid } from '../../components/contextGrid/ContextGrid';
+
 const HomePage = () => {
-  return <h1>Hola!</h1>;
+return(
+    <>
+    <ContextGrid/>
+    </>
+)
 };
 
 export default HomePage;

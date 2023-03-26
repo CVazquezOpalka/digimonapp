@@ -1,13 +1,14 @@
-import MyRoutes from './routes/routes'
+import MyRoutes from "./routes/routes";
+import { DigimonProvider } from "./context/DigimonProvider";
 
 function App() {
-  
-
   return (
-   <>
-   <MyRoutes/>
-   </>
-  )
+    <>
+      <DigimonProvider>
+        <MyRoutes />
+      </DigimonProvider>
+    </>
+  );
 }
 
-export default App
+export default App;

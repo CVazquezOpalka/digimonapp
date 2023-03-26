@@ -12,7 +12,7 @@ export const ContextGrid = () => {
         {loading ? (
           <h1>Cargandoo</h1>
         ) : (
-          allDigimon.map((e) => <Card key={e.name} digimon={e} />)
+          allDigimon.filter(e=>e.level === 'Rookie').map((e) => <Card key={e.name} digimon={e} />)
         )}
       </section>
     </main>

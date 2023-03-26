@@ -1,22 +1,42 @@
 .card_container {
-  width: 230px;
-  height: 230px;
-  background: green;
   position: relative;
+  min-width: 230px;
+  min-height: 230px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  z-index: 10;
+  padding: 0 20px;
+  backdrop-filter: blur(25px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0.5;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.card_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #b6fcfd;
+  clip-path: circle(60px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.card_container:hover::before {
+  clip-path: circle(240px at 80% -20%);
 }
 
 .card_imgBox {
+  display: flex;
+  z-index: 10000;
   width: 100%;
   height: auto;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 .card_img {
@@ -28,22 +48,33 @@
 
 .card_section {
   width: 100%;
-  height: auto;
+  height: calc(100%-180px);
   display: flex;
+  padding-top: 10px;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 1;
 }
 
 .section_name {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   color: #111;
 }
-.section.level {
-  font-size: 13px;
+.section_level {
+  font-size: 15px;
   font-weight: 500;
-  color: #333;
+  color: #111;
   text-transform: uppercase;
+}
+
+.card_container:hover {
+  opacity: 1;
+  box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1) translateX(20px) translateY(-10px);
+  z-index: 1000;
+  
 }

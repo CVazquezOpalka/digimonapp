@@ -5,6 +5,13 @@ import axios from "axios";
 export const DigimonProvider = ({ children }) => {
   const [allDigimon, setAllDigimon] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [active, setActive] = useState(false);
+  const [checkbox, setCheckbox] = useState({
+    Rookie: false,
+    Champion: false,
+    Mega: false,
+  });
+  const [filter, setFilter] = useState([])
 
   const getDigimonByLevel = async () => {
     const rookie = `https://digimon-api.vercel.app/api/digimon/level/rookie`;
@@ -15,7 +22,6 @@ export const DigimonProvider = ({ children }) => {
     const resMega = await axios.get(mega);
     setAllDigimon([...resRookie.data, ...resChampion.data, ...resMega.data]);
     setLoading(false);
-    console.log(allDigimon)
   };
 
   useEffect(() => {
@@ -23,6 +29,17 @@ export const DigimonProvider = ({ children }) => {
   }, []);
 
   return (
-    <DigimonContext.Provider value={{allDigimon, loading}}>{children}</DigimonContext.Provider>
+    <DigimonContext.Provider
+      value={{
+        allDigimon,
+        loading,
+        checkbox,
+        setCheckbox,
+        setFilter,
+        filter
+      }}
+    >
+      {children}
+    </DigimonContext.Provider>
   );
 };

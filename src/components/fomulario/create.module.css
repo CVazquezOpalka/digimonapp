@@ -1,0 +1,85 @@
+.container {
+  width: 350px;
+  height: 500px;
+  border: 1px solid #333;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  background-color: #ffffff1a;
+z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
+  
+}
+.form {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.container .form .containerImg {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container .form .containerImg a{
+    display: block;
+    margin-top: 35px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+.container .form .containerImg a:hover{
+    transform: scale(1.1)
+}
+.container .form .containerName {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .container .form .containerName input{
+    margin-left: 20px;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  .container .form .containerLevel {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+  .container .form .containerLevel select{
+    margin-left: 40px;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  .container .form .btn{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container .form .btn button{
+    padding: 10px 15px;
+  }

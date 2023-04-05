@@ -24,6 +24,7 @@ export const DigimonProvider = ({ children }) => {
     setLoading(false);
   };
 
+
   useEffect(() => {
     getDigimonByLevel();
   }, []);

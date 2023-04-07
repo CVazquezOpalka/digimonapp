@@ -24,21 +24,22 @@ const Container = styled.section`
   &::before {
     content: "";
     position: absolute;
-    top:350px;
+    top: 350px;
+    left: 45%;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background: linear-gradient(#ffc107, #e91e63);
     transform: translate(-250px, -120px);
-    z-index: 
+    z-index: ;
   }
   &::after {
     content: "";
     position: absolute;
-    bottom:80px;
-    right: 310px;
-    width: 130px;
-    height: 130px;
+    bottom: 80px;
+    right: 40%;
+    width: 230px;
+    height: 230px;
     background: linear-gradient(#2196f3, #31ff38);
     border-radius: 50%;
     transform: translate(250px, 120px);
